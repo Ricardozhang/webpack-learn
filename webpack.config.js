@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        common: './src/common.js'
+        // common: './src/common.js'
     },
     mode: "development",
     output: {
@@ -29,5 +29,8 @@ module.exports = {
             test: /\.(png|svg|jpg|gif|jpeg)$/,
             use: ['file-loader'] // 未压缩图片
         }]
-    }
+    },
+    devServer: {
+        contentBase: './dist'
+    },
 };
