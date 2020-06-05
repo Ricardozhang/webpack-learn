@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist') // __dirname 被执行js文件的绝对路径
+        path: path.resolve(__dirname, 'dist'), // __dirname 被执行js文件的绝对路径
+        chunkFilename: '[name].bundle.js',
     },
     plugins: [ // plugins的执行顺序是从上往下
         new CleanWebpackPlugin(),
