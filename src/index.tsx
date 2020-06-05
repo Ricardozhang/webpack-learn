@@ -1,4 +1,3 @@
-import './index.css';
 import './index.less';
 
 const element = document.createElement('div');

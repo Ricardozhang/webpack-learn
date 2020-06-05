@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index',
+        index: './app',
         vendor: ['lodash']
     },
     output: { // 注： 热替换影响了chunkhash的使用，
