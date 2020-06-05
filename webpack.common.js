@@ -2,11 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './src/index.js',
+        index: './src/index',
         vendor: ['lodash']
     },
     output: { // 注： 热替换影响了chunkhash的使用，
@@ -41,6 +40,9 @@ module.exports = {
             }
         },
     },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ]
+    },
     module: {
         rules: [{
             test: /\.css$/,
@@ -51,6 +53,10 @@ module.exports = {
         }, {
             test: /\.(png|svg|jpg|gif|jpeg)$/,
             use: ['file-loader'] // 未压缩图片
+        }, {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/
         }]
     }
 };
