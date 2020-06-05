@@ -13,4 +13,13 @@ module.exports = {
             title: 'Output Management'
         })
     ],
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']  // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+        }, {
+            test: /\.less$/,
+            use: ['style-loader', 'css-loader', 'less-loader']  // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+        }]
+    }
 };
