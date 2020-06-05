@@ -5,9 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        // common: './src/common.js'
     },
-    mode: "development",
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist') // __dirname 被执行js文件的绝对路径
@@ -29,8 +27,5 @@ module.exports = {
             test: /\.(png|svg|jpg|gif|jpeg)$/,
             use: ['file-loader'] // 未压缩图片
         }]
-    },
-    devServer: {
-        contentBase: './dist'
-    },
+    }
 };
