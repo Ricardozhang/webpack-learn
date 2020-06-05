@@ -2,10 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        common: './src/common.js'
+    },
     mode: "development",
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist') // __dirname 被执行js文件的绝对路径
     },
     plugins: [
@@ -20,6 +23,9 @@ module.exports = {
         }, {
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader']  // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+        }, {
+            test: /\.(png|svg|jpg|gif|jpeg)$/,
+            use: ['file-loader'] // 未压缩图片
         }]
     }
 };
