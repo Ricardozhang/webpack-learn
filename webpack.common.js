@@ -26,7 +26,7 @@ module.exports = {
                 common:{
                     chunks: 'initial',
                     name:'common', // 打包后的文件名
-                    minSize: 0, 
+                    minSize: 0,
                     minChunks: 2 // 重复2次才能打包到此模块
                 },
                 vendor: {
@@ -46,10 +46,10 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']  // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+            use: [MiniCssExtractPlugin.loader, 'css-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
         }, {
             test: /\.less$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']  // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
         }, {
             test: /\.(png|svg|jpg|gif|jpeg)$/,
             use: ['file-loader'] // 未压缩图片
