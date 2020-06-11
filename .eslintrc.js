@@ -74,7 +74,7 @@ module.exports = {
         "no-unsafe-finally": 2,
         "no-unsafe-negation": 2,
         "no-unused-labels": 2,
-        "no-unused-vars": 2,
+        "no-unused-vars": 1,
         "no-useless-catch": 2,
         "no-useless-escape": 2,
         "no-with": 2,
@@ -85,6 +85,8 @@ module.exports = {
         "no-irregular-whitespace": 2,
         "no-multi-spaces": 1,
         "no-trailing-spaces": 1,
-        "@typescript-eslint/no-explicit-any": 0
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-unused-vars": 1,
+        "@typescript-eslint/no-empty-interface": 1
     }
 };

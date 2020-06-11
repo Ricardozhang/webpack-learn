@@ -3,16 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 module.exports = {
     entry: {
         index: './app',
         // vendor: ['lodash']
     },
     output: { // 注： 热替换影响了chunkhash的使用，
-        filename: '[name].[chunkhash].js',
+        filename:  '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist'), // __dirname 被执行js文件的绝对路径
-        chunkFilename: '[name].[chunkhash].js',
+        chunkFilename: '[name].[chunkhash].js'
     },
     plugins: [ // plugins的执行顺序是从上往下
         new CleanWebpackPlugin(),
@@ -20,7 +19,7 @@ module.exports = {
             title: 'Output Management'
         }),
         new MiniCssExtractPlugin(),
-        new BundleAnalyzerPlugin
+        // new BundleAnalyzerPlugin()
     ],
     optimization: {
         splitChunks:{
@@ -43,7 +42,10 @@ module.exports = {
         },
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.js' ],
+        alias: {
+            "@layouts": path.resolve("src/layouts")
+        }
     },
     module: {
         rules: [{

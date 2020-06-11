@@ -10,6 +10,10 @@
         "importHelpers": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "module": "ESNext"
+        "module": "ESNext",
+        "baseUrl": "./",
+        "paths": {
+            "@layouts/*": ["src/layouts/*"] // 新增alias
+        }
     }
 }
