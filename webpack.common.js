@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
         index: './app',
-        vendor: ['lodash']
+        // vendor: ['lodash']
     },
     output: { // 注： 热替换影响了chunkhash的使用，
         filename: '[name].[chunkhash].js',
@@ -19,6 +20,7 @@ module.exports = {
             title: 'Output Management'
         }),
         new MiniCssExtractPlugin(),
+        new BundleAnalyzerPlugin
     ],
     optimization: {
         splitChunks:{

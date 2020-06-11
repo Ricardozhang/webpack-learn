@@ -84,6 +84,7 @@ module.exports = {
         "valid-typeof": 2,
         "no-irregular-whitespace": 2,
         "no-multi-spaces": 1,
-        "no-trailing-spaces": 1
+        "no-trailing-spaces": 1,
+        "@typescript-eslint/no-explicit-any": 0
     }
 };
