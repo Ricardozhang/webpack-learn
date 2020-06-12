@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
     entry: {
         index: './app',
@@ -18,7 +18,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management'
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
+        }),
         // new BundleAnalyzerPlugin()
     ],
     optimization: {
