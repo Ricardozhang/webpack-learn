@@ -16,7 +16,8 @@ module.exports = {
     plugins: [ // plugins的执行顺序是从上往下
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            favicon: 'favicon.ico'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css',
