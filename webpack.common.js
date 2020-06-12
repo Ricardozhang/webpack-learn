@@ -53,10 +53,10 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
         }, {
             test: /\.less$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader', 'postcss-loader'] // loader的执行顺序是从右往左，最终会将css注入到 html的head中
         }, {
             test: /\.(png|svg|jpg|gif|jpeg)$/,
             use: ['file-loader'] // 未压缩图片
