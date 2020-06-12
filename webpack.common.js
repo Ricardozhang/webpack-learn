@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
     entry: {
-        index: './app',
+        index: './src/index',
         // vendor: ['lodash']
     },
     output: { // 注： 热替换影响了chunkhash的使用，
@@ -23,7 +23,7 @@ module.exports = {
             filename: '[name].[hash].css',
             chunkFilename: '[id].[hash].css',
         }),
-        // new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin()
     ],
     optimization: {
         splitChunks:{
@@ -48,7 +48,9 @@ module.exports = {
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
         alias: {
-            "@layouts": path.resolve("src/layouts")
+            "@layouts": path.resolve("src/layouts"),
+            "@components": path.resolve("src/components"),
+            "@pages": path.resolve("src/pages")
         }
     },
     module: {

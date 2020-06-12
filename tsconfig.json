@@ -13,7 +13,9 @@
         "module": "ESNext",
         "baseUrl": "./",
         "paths": {
-            "@layouts/*": ["src/layouts/*"] // 新增alias
+            "@layouts/*": ["src/layouts/*"],
+            "@components/*": ["src/components/*"],
+            "@pages/*": ["src/pages/*"]
         }
     }
 }
