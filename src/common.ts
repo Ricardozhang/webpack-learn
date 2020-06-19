@@ -1,13 +1,8 @@
 
 export const aaa = () => {
-    // console.log('aaan');
+    console.log('aaa');
 };
 
 export const bbba = () => {
-    // console.log('bbbb');
-};
-
-export default {
-    aaa,
-    bbba
+    console.log('bbbb');
 };

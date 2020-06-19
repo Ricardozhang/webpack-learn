@@ -23,7 +23,7 @@ module.exports = {
             filename: '[name].[hash].css',
             chunkFilename: '[id].[hash].css',
         }),
-        new BundleAnalyzerPlugin()
+        // new BundleAnalyzerPlugin()
     ],
     optimization: {
         splitChunks:{

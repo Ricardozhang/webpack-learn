@@ -6,8 +6,17 @@ import Header from '@layouts/header';
 import Footer from '@layouts/footer';
 import RouterArea from '@components/routerArea';
 import { routes } from './index.router';
+import { aaa } from './common';
 
 class App extends React.Component<{}, {}> {
+
+    constructor(props: {}) {
+        super(props);
+        aaa();
+        fetch('/api/user/list?id=2').then(res => res.json()).then(value => {
+            console.log(value);
+        });
+    }
 
     render() {
         return (

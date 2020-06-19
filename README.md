@@ -1,3 +1,3 @@
 # webpack-learn
 
-wepback+react+typescript+antd
+webpack+react+typescript+antd
