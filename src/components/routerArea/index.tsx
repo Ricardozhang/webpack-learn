@@ -8,6 +8,7 @@ export interface IRouteProps extends RouteProps {
     component: any;
     hide?: boolean;
     name?: string;
+    children?: IRouteProps[];
 }
 interface IRouterAreaProps {
     routes: IRouteProps[];

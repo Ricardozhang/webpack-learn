@@ -11,7 +11,8 @@ module.exports = {
     output: { // 注： 热替换影响了chunkhash的使用，
         filename:  '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist'), // __dirname 被执行js文件的绝对路径
-        chunkFilename: '[name].[chunkhash].js'
+        chunkFilename: '[name].[chunkhash].js',
+        publicPath: '/'
     },
     plugins: [ // plugins的执行顺序是从上往下
         new CleanWebpackPlugin(),

@@ -1,6 +1,7 @@
 
 import { IRouteProps } from './components/routerArea';
 import loadable from '@loadable/component';
+import { routes as aboutRoutes } from '@pages/about/index.router';
 
 export const routes: IRouteProps[] = [{
     path: '/',
@@ -14,5 +15,6 @@ export const routes: IRouteProps[] = [{
 }, {
     path: '/about',
     name: '关于',
-    component: loadable(() => import('@pages/about'))
+    component: loadable(() => import('@pages/about')),
+    children: aboutRoutes,
 }];

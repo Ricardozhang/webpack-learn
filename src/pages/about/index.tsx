@@ -2,11 +2,11 @@
 
 
 import React from 'react';
-import { Tag } from 'antd';
-
+import RouterArea from '@components/routerArea';
+import { routes } from './index.router';
 export default class About extends React.Component {
 
     render() {
-        return <Tag color="red">about</Tag>;
+        return <RouterArea routes={ routes } />;
     }
 }

@@ -14,7 +14,8 @@ export default class Header extends React.Component<IHeaderProps> {
         const { routes } = this.props;
         return (
             <header className="header">
-                <Menu mode="horizontal" className="menu">
+                <div className="logo">webpack</div>
+                <Menu mode="horizontal" className="menu" theme="dark">
                     {
                         routes.map(router => (
                             router.hide

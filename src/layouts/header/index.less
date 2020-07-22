@@ -1,10 +1,32 @@
 .header {
+    background-color: #001529;
     position: relative;
     height: 64px;
     padding: 0;
     background: #fff;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    display: flex;
+    .logo {
+        height: 64px;
+        line-height: 64px;
+        text-align: right;
+        width: 200px;
+        background-color: #001529;
+        padding-right: 12px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        vertical-align: top;
+    }
 }
 .menu {
+    flex: 1;
     line-height: 64px;
+    font-size: 15px;
+    .ant-menu-item.ant-menu-item-only-child.ant-menu-item-selected {
+        background-color: transparent;
+        .active {
+            color: #1890ff;
+        }
+    }
 }
