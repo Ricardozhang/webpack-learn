@@ -12,7 +12,7 @@ module.exports = {
         filename:  '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist'), // __dirname 被执行js文件的绝对路径
         chunkFilename: '[name].[chunkhash].js',
-        publicPath: '/'
+        publicPath: ''
     },
     plugins: [ // plugins的执行顺序是从上往下
         new CleanWebpackPlugin(),

@@ -8,6 +8,7 @@ module.exports = {
           [
             'ADD', // 新功能（feature）
             'FIX', // 修补bug
+            'DEL', // 某些无用内容的删除
             'DOC', // 文档（documentation）
             'STYLE', // 格式（不影响代码运行的变动）
             'REF', // 重构（即不是新增功能，也不是修改bug的代码变动）

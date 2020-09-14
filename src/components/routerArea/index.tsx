@@ -1,7 +1,8 @@
 
 
 import React from 'react';
-import { Route, Switch, RouteProps } from 'react-router-dom';
+import { Route, Switch, RouteProps, HashRouter } from 'react-router-dom';
+
 
 export interface IRouteProps extends RouteProps {
     path: string;
