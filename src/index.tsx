@@ -7,12 +7,14 @@ import Footer from '@layouts/footer';
 import RouterArea from '@components/routerArea';
 import { routes } from './index.router';
 import { aaa } from './common';
+import { addDate } from '@tutor/lbutils';
 
 class App extends React.Component<{}, {}> {
 
     constructor(props: {}) {
         super(props);
         aaa();
+        console.log(+addDate(new Date(), 1));
         fetch('/api/user/list?id=2').then(res => res.json()).then(value => {
             console.log(value);
         });
